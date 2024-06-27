@@ -11,6 +11,8 @@ const meta: Meta<typeof Tooltip> = {
   args: {
     content: "This is a tooltip",
     direction: "top",
+    showDelay: 0,
+    hideDelay: 0,
   },
 } satisfies Meta<typeof Tooltip>;
 
@@ -42,5 +44,19 @@ export const Right: TooltipStory = {
   args: {
     direction: "right",
     children: <span>Hover over me (Right)</span>,
+  },
+};
+
+export const DelayedShow: TooltipStory = {
+  args: {
+    children: <span>Hover over me (Show Delay 1s)</span>,
+    showDelay: 1000,
+  },
+};
+
+export const DelayedHide: TooltipStory = {
+  args: {
+    children: <span>Hover over me (Hide Delay 1s)</span>,
+    hideDelay: 1000,
   },
 };
